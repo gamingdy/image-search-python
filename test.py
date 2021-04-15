@@ -9,29 +9,17 @@ header = {'User-Agent': agent}
 def img_fin(link):
     img_req = requests.get(url=link)
     img_pars = BeautifulSoup(img_req.text, "html.parser")
-    print(img_pars)
+    a = open("non.html", "w", encoding="utf-8")
+    b = "".join(str(img_pars.contents))
+    a.write(b,)
 
 
-url_image = "https://www.bing.com/images/search?view=detailV2&ccid=s%2bOYui1H&id=2BFF496C57BF963630DB68300AE193053C8" \
-            "C12F5&thid=OIP.s-OYui1H2TGvEPfuAl-QfQHaKX&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fRb3e398ba2d47d" \
-            "931af10f7ee025f907d%3frik%3d9RKMPAWT4QowaA%26riu%3dhttp%253a%252f%252fsparkhistory.com%252fwp-content%2" \
-            "52fuploads%252f2018%252f04%252fparis-france-eiffel-tower-roadview-SparkHistory.jpg%26ehk%3dc9O261A3tce" \
-            "p3IivpPVLOBxOdhW4fE4W3yhSMZR4Jxw%253d%26risl%3d%26pid%3dImgRaw&exph=3673&expw=2624&q=france&simid=6080" \
-            "36445704451443&ck=D4DE5E1E599D3E0A37B1F8B442867B81&selectedIndex=0&FORM=IRPRS"
+url_image = "https://www.bing.com/images/search?view=detailV2&ccid=k5gv%2Bk5V&id=51EB8D7ECC14D523359693C3A878D7A63F1" \
+            "ADC57&thid=OIP.k5gv-k5VxexBaa4XoknElAHaFj&mediaurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR93982ffa4e55c5" \
+            "ec4169ae17a249c494%3Frik%3DV9waP6bXeKjDkw%26riu%3Dhttp%253a%252f%252fdrwyjmricaxm7.cloudfront.net%252fre" \
+            "pository%252fFrance-day-tours-and-excursions--On-The-Go-Tours-537101517504528_crop_800_600.jpg%26ehk%3D" \
+            "hs0XqZausPJz90rRzUObyGO9eW29%252fVRK7z%252fg%252fa0COvY%253d%26risl%3D%26pid%3DImgRaw&exph=600&expw=800" \
+            "&q=france&simid=608017857089599616&ck=5AD08DA36FBFCCE466BB3EA867DE9E72&selectedindex=35&form=IRPRST&vt=0&s" \
+            "im=11"
 
-print(url_image)
-
-
-url = "https://www.bing.com/images/search?q=france&form=HDRSC2&first=1&tsc=ImageBasicHover"
-rsp = requests.get(url, headers=header)
-soup = BeautifulSoup(rsp.text, "html.parser")
-a_balise = soup.find_all("a", {"class": "iusc"})
-link = []
-bing = "https://www.bing.com"
-
-for i in range(15):
-    href = f"{a_balise[i]}"
-    link_start = href.index("href=")+6
-    link_end = href.index("m='")-3
-    link = f"{bing}{href[link_start:link_end]}".replace("amp;", "")
-    print(link)
+print(img_fin(url_image))
