@@ -5,10 +5,9 @@ agent = "Mozilla/5.0 (Linux; U; Android 2.3.3; fr-fr; GT-I9100 Build/GINGERBREAD
         "(KHTML, like Gecko) Version/4.0 Mobile Safari/533.1"
 header = {'User-Agent': agent}
 
-query = input("recheche: ")
-query = query.replace(" ","+")
-url = f"https://google.com/search?q={query}&source=lnms&tbm=isch"
-print(url)
+img_search = input("recheche: ")
+img_search = img_search.replace(" ", "+")
+url = f"https://google.com/search?q={img_search}&source=lnms&tbm=isch"
 r = requests.get(url, headers=header)
 soup = BeautifulSoup(r.text, "html.parser")
 a_div = soup.find_all("div", {"class": "lIMUZd"})
