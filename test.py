@@ -24,3 +24,5 @@ for i in range(len(a_div)):
         src_end = a_balise.index('imgrefurl') - 5
         print(f"{a_balise[src_start:src_end]}")
 
+def rainbow():
+    print("nom de la fonction pour les resultat random")
