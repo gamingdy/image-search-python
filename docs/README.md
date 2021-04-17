@@ -4,9 +4,9 @@ L'objectif de ce projet est d'effectuer des recherches google image avec python,
 
 ### Sommaires
 
-- [Installation](https://github.com/gamingdy/image-search-python/tree/dev/docs#installation)
-- [Utilisation](https://github.com/gamingdy/image-search-python/tree/dev/docs#utilisation)
-- [Bugs et Features](https://github.com/gamingdy/image-search-python/tree/dev/docs#bugs-et-features)
+- [Installation](https://github.com/gamingdy/image-search-python/tree/main/docs#installation)
+- [Utilisation](https://github.com/gamingdy/image-search-python/tree/main/docs#utilisation)
+- [Bugs et Features](https://github.com/gamingdy/image-search-python/tree/main/docs#bugs-et-features)
 
 
 ### Installation

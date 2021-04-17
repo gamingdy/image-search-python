@@ -1,6 +1,6 @@
 # image-search-python
  
-[Version française](https://github.com/gamingdy/image-search-python/tree/dev/docs)
+[Version française](https://github.com/gamingdy/image-search-python/tree/main/docs)
 
 
 The objective of this project is to search an image on google with python, the whole in console, which allows, for example, a discord bot to search an image on google.
