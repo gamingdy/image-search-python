@@ -50,7 +50,7 @@ print(img)
 >>> # Print a list with five elements
 ```
 
-__*Warning*__: The max value of results is 20 
+__**Warning**__: The max value of results is 20 
 
 
 #### Bugs/Features

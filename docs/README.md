@@ -8,7 +8,7 @@ Ce projet a pour objectif de permettre la réalisation de recherche google image
 
 - [Installation](https://github.com/gamingdy/image-search-python/tree/dev/docs#installation)
 - [Utilisation](https://github.com/gamingdy/image-search-python/tree/dev/docs#utilisation)
-- [Bugs et Features]()
+- [Bugs et Features](https://github.com/gamingdy/image-search-python/tree/dev/docs#bugs-et-features)
 
 
 #### Installation
@@ -48,7 +48,7 @@ print(img)
 >>> # Affiche une liste avec cinq éléments
 ```
 
-__*Attention*__: Le nombre max de résultats est de 20.
+__**Attention**__: Le nombre max de résultats est de 20.
 
 
 #### Bugs et features
