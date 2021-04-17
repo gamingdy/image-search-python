@@ -11,7 +11,7 @@ The objective of this project is to make a search with google image, the whole i
 
 - [Installation](https://github.com/gamingdy/image-search-python#installation)
 - [Usage](https://github.com/gamingdy/image-search-python#usage)
-- [Bugs and Feature](https://github.com/gamingdy/image-search-python#bugs/features)
+- [Bugs and Feature](https://github.com/gamingdy/image-search-python#bugsfeatures)
 #### Installation
 
 For install you can simply do  ``pip install module_name`` 
