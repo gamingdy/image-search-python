@@ -8,7 +8,7 @@ header = {'User-Agent': agent}
 
 
 def pony(query, num_result=1):
-    img_search = query.replace(" ", "+")
+    img_search = str(query).replace(" ", "+")
     url = f"https://google.com/search?q={img_search}&source=lnms&tbm=isch"
     r = get(url, headers=header)
     soup = BeautifulSoup(r.text, "html.parser")
@@ -29,5 +29,3 @@ def pony(query, num_result=1):
             src_end = a_balise.index('imgrefurl') - 5
             img_link.append(f"{a_balise[src_start:src_end]}")
     return img_link[0:result]
-
-print(pony("pygame"))

@@ -2,21 +2,19 @@
  
 
 
-### Version-française
-
 Ce projet a pour objectif de permettre la réalisation de recherche google image, le tout en console, ce qui permet par exemple d'effectuer une recherche d'image avec des bots 
 
 
-##### Sommaires 
+#### Sommaires 
 
 - [Installation](https://github.com/gamingdy/image-search-python/tree/dev/docs#installation)
-- [Utilisation](https://github.com/gamingdy/image-search-python/tree/dev/docs#Utilisation)
+- [Utilisation](https://github.com/gamingdy/image-search-python/tree/dev/docs#utilisation)
 
-##### Installation
+#### Installation
 
 Pour installer le module vous pouvez simplement faire un ``pip install``
 
-##### Utilisation
+#### Utilisation
 
 Maintenant le plus important, le module est enfin installer sur votre pc, il est maintenant temps de l'utilser.
 
