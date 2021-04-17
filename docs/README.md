@@ -1,8 +1,6 @@
 # image-search-python
  
 
-[Version française](https://github.com/gamingdy/image-search-python/tree/dev)
-
 
 ### Version-française
 

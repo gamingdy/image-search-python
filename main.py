@@ -29,3 +29,5 @@ def pony(query, num_result=1):
             src_end = a_balise.index('imgrefurl') - 5
             img_link.append(f"{a_balise[src_start:src_end]}")
     return img_link[0:result]
+
+print(pony("pygame"))
