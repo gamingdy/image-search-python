@@ -9,8 +9,8 @@ Ce projet a pour objectif de permettre la réalisation de recherche google image
 
 ##### Sommaires 
 
-- [Installation](https://github.com/gamingdy/image-search-python#Comment l'installer)
-- [Utilisation](https://github.com/gamingdy/image-search-python#Utilisation)
+- [Installation](https://github.com/gamingdy/image-search-python/tree/dev/docs#installation)
+- [Utilisation](https://github.com/gamingdy/image-search-python/tree/dev/docs#Utilisation)
 
 ##### Installation
 
@@ -41,18 +41,4 @@ Là on a un problème, le lien re
 ```py
 
 ```
-
-
-
-### English-version
-
-The objective of this project is to make a search with google image, the whole in console, that's allow for a exemple , a bot who can made an image search on google.
-
-
-##### Summary
-
-- [Installation](https://github.com/gamingdy/image-search-python#Installation)
-- [Utilisation](https://github.com/gamingdy/image-search-python#Utilisation)
-
-#### Installation
 
