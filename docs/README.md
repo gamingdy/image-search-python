@@ -4,19 +4,19 @@
 Ce projet a pour objectif de permettre la réalisation de recherche google image, le tout en console, ce qui permet par exemple d'effectuer une recherche d'image avec des bots 
 
 
-#### Sommaires 
+### Sommaires 
 
 - [Installation](https://github.com/gamingdy/image-search-python/tree/dev/docs#installation)
 - [Utilisation](https://github.com/gamingdy/image-search-python/tree/dev/docs#utilisation)
 - [Bugs et Features](https://github.com/gamingdy/image-search-python/tree/dev/docs#bugs-et-features)
 
 
-#### Installation
+### Installation
 
 Pour installer le module vous pouvez simplement faire un ``pip install``
 
 
-#### Utilisation
+### Utilisation
 
 Maintenant le plus important, le module est enfin installer sur votre pc, il est maintenant temps de l'utilser.
 
@@ -51,7 +51,7 @@ print(img)
 __**Attention**__: Le nombre max de résultats est de 20.
 
 
-#### Bugs et features
+### Bugs et features
 
 Si vous rencontrez des bugs, vous pouvez créer un nouvelle issue avec des détails au sujet du bug rencontré.
 

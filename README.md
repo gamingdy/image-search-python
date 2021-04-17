@@ -6,19 +6,19 @@
 The objective of this project is to make a search with google image, the whole in console, that's allow for a exemple , a bot who can made an image search on google.
 
 
-#### Summary
+### Summary
 
 - [Installation](https://github.com/gamingdy/image-search-python#installation)
 - [Usage](https://github.com/gamingdy/image-search-python#usage)
 - [Bugs and Feature](https://github.com/gamingdy/image-search-python#bugsfeatures)
 
 
-#### Installation
+### Installation
 
 For install you can simply do  ``pip install module_name`` 
 
 
-#### Usage
+### Usage
 
 Now, the most important thing. You have module on your computer and it's time to use it.
 
@@ -53,7 +53,7 @@ print(img)
 __**Warning**__: The max value of results is 20 
 
 
-#### Bugs/Features
+### Bugs/Features
 
 If you encounter a bug, you can create an issue, with details of the bug encountered.
 
