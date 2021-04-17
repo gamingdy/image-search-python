@@ -1,7 +1,6 @@
 # image-search-python
  
 
-
 Ce projet a pour objectif de permettre la réalisation de recherche google image, le tout en console, ce qui permet par exemple d'effectuer une recherche d'image avec des bots 
 
 
@@ -9,34 +8,51 @@ Ce projet a pour objectif de permettre la réalisation de recherche google image
 
 - [Installation](https://github.com/gamingdy/image-search-python/tree/dev/docs#installation)
 - [Utilisation](https://github.com/gamingdy/image-search-python/tree/dev/docs#utilisation)
+- [Bugs et Features]()
+
 
 #### Installation
 
 Pour installer le module vous pouvez simplement faire un ``pip install``
 
+
 #### Utilisation
 
 Maintenant le plus important, le module est enfin installer sur votre pc, il est maintenant temps de l'utilser.
 
-Nous allons commencer par l'importer.
-
-```py
-from module_name import pony    # première méthode d'import
-import module_name              # deuxième méthode d'import
-```
-
-Une fois l'import réalisé on peut faire une recherche classique pour tester (je vous montre avec les deux import)
+Pour une simple recherche vous pouvez faire.
 
 ```py
 from module_name import pony
 
-recherche = pony("pygame")
-print(recherche)
->>> ['https://upload.wikimedia.org/wikipedia/fr/7/76/Pygame_%25282019%2529_Logo.png']
+img = pony("python langage")
+# OU
+img = pony(query="python langage")
+
+print(img)      # Affiche une liste de un élément 
+
+>>> ['https://cdn.futura-sciences.com/buildsv6/images/largeoriginal/3/9/a/39a7d35bbd_50163520_formation-python.jpg']
 ```
-Là on a un problème, le lien re
+
+Si vous voulez spécifier le nombre de résultat vous pouvez faire
 
 ```py
+from module_name import pony
 
+img = pony("python langage", 5)
+# OR
+img = pony("python langage", num_result= 5)
+
+print(img)
+
+>>> # Affiche une liste avec cinq éléments
 ```
 
+__*Attention*__: Le nombre max de résultats est de 20.
+
+
+#### Bugs et features
+
+Si vous rencontrez des bugs, vous pouvez créer un nouvelle issue avec des détails au sujet du bug rencontré.
+
+Pour toute demandes de features vous pouvez créer un pull request, avec les détails sur la feature que vous aimeriez avoir

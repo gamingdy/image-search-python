@@ -1,6 +1,5 @@
 # image-search-python
  
-
 [Version française](https://github.com/gamingdy/image-search-python/tree/dev/docs)
 
 
@@ -12,22 +11,25 @@ The objective of this project is to make a search with google image, the whole i
 - [Installation](https://github.com/gamingdy/image-search-python#installation)
 - [Usage](https://github.com/gamingdy/image-search-python#usage)
 - [Bugs and Feature](https://github.com/gamingdy/image-search-python#bugsfeatures)
+
+
 #### Installation
 
 For install you can simply do  ``pip install module_name`` 
+
 
 #### Usage
 
 Now, the most important thing. You have module on your computer and it's time to use it.
 
-For a simply search, you must do this
+For a simply search, you must do this.
 
 ```py
 from module_name import pony
 
-img = pony("python")
+img = pony("python langage")
 # OR
-img = pony(query="python")
+img = pony(query="python langage")
 
 print(img)      # Print a list with one element
 
@@ -47,6 +49,9 @@ print(img)
 
 >>> # Print a list with five elements
 ```
+
+__*Warning*__: The max value of results is 20 
+
 
 #### Bugs/Features
 
