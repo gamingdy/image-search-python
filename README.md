@@ -15,7 +15,9 @@ The objective of this project is to search an image on google with python, the w
 
 ### Installation
 
-For install you can simply do  ``pip install module_name`` 
+For install you can simply do  ``pip install imgsearch``.
+
+[PIPY](https://pypi.org/project/imgsearch/)
 
 
 ### Usage
