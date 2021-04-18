@@ -15,8 +15,9 @@ The objective of this project is to search an image on google with python, the w
 
 ### Installation
 
-For install you can simply do  ``pip install module_name`` 
+For install you can simply do  ``pip install imgsearch``.
 
+[PIPY](https://pypi.org/project/imgsearch/)
 
 ### Usage
 
@@ -49,7 +50,7 @@ img = pony(query="python langage", num_result=5)
 
 print(img)
 
->> # Print a list with five elements
+>>  # Print a list with five elements
 ```
 
 **🚨 Warning 🚨**: The max value of results is 20 
