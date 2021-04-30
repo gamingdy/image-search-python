@@ -53,6 +53,20 @@ print(img)
 >>  # Print a list with five elements
 ```
 
+If you want a random result, you can do
+
+```py
+from imgsearch import rainbow
+
+img = rainbow("python langage", 5)
+#OR 
+img = rainbow(query="python langage", num_result=5)
+
+print(img)
+
+>> # Print a list with random each time
+```
+
 **🚨 Warning 🚨**: The max value of results is 20 
 
 

@@ -49,6 +49,20 @@ print(img)
 >> # Affiche une liste avec cinq éléments
 ```
 
+Si vous voulez des résultats random, vous pouvez faire
+
+```py
+from imgsearch import rainbow
+
+img = rainbow("python langage", 5)
+#OR 
+img = rainbow(query="python langage", num_result=5)
+
+print(img)
+
+>> # Affiche une liste avec des résultat aléatoires, chaque fois
+```
+
 **🚨 Attention 🚨** : Le nombre max de résultats est de 20.
 
 
