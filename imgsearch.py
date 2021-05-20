@@ -8,9 +8,7 @@ agent = "Mozilla/5.0 (Linux; U; Android 2.3.3; fr-fr; GT-I9100 Build/GINGERBREAD
 header = {'User-Agent': agent}
 
 
-def pony(query, num_result=1):
-    img_search = str(query).replace(" ", "+")
-    url = f"https://google.com/search?q={img_search}&source=lnms&tbm=isch"
+def all_recherche(url, num_result):
     r = get(url, headers=header)
     soup = BeautifulSoup(r.text, "html.parser")
     a_div = soup.find_all("div", {"class": "lIMUZd"})
@@ -32,6 +30,13 @@ def pony(query, num_result=1):
     return img_link[0:result]
 
 
+def pony(query, num_result=1):
+    img_search = str(query).replace(" ", "+")
+    url = f"https://google.com/search?q={img_search}&source=lnms&tbm=isch"
+    req = all_recherche(url, num_result)
+    return req
+
+
 def rainbow(query, num_result=1):
     req = pony(query, 20)
     result = num_result
@@ -43,26 +48,12 @@ def rainbow(query, num_result=1):
 def gif(query, num_result=1):
     gif_search = str(query).replace(" ", "+")
     url = f"https://google.com/search?q={gif_search}&source=lnms&tbm=isch&tbs=itp:animated"
-    r = get(url, headers=header)
-    soup = BeautifulSoup(r.text, "html.parser")
-    a_div = soup.find_all("div", {"class": "lIMUZd"})
-    gif_link = []
-    if num_result > len(a_div):
-        result = len(a_div)
-    else:
-        result = num_result
-    for i in range(len(a_div)):
-        a_balise = f"{a_div[i]}"
-        if ' class="BhZo9">' in a_balise:
-            pass
-        elif a_balise.startswith('<div class="lIMUZd"><div><table class="By0U9">'):
-            pass
-        else:
-            src_start = a_balise.index('imgurl=') + 7
-            src_end = a_balise.index('imgrefurl') - 5
-            gif_link.append(f"{a_balise[src_start:src_end]}")
-    return gif_link[0:result]
+    gif_link = all_recherche(url, num_result)
+    return gif_link
 
 
-def wb():
-    url = "tbs=ic:gray"
+def wb(query, num_result=1):
+    wb_search = str(query).replace(" ", "+")
+    url = f"https://google.com/search?q={wb_search}&source=lnms&tbm=isch&tbs=ic:gray"
+    wb_link = all_recherche(url, num_result)
+    return wb_link
