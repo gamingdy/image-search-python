@@ -10,24 +10,18 @@ header = {'User-Agent': agent}
 
 def all_recherche(url, num_result):
     r = get(url, headers=header)
-    soup = BeautifulSoup(r.text, "html.parser")
-    a_div = soup.find_all("div", {"class": "lIMUZd"})
+    a_div = BeautifulSoup(r.text, "html.parser").find_all("div", {"class": "lIMUZd"})
     img_link = []
-    if num_result > len(a_div):
-        result = len(a_div)
-    else:
-        result = num_result
-    for i in range(len(a_div)):
+    result = len(a_div) if num_result > len(a_div) else num_result
+
+    for i in range(result):
         a_balise = f"{a_div[i]}"
-        if ' class="BhZo9">' in a_balise:
-            pass
-        elif a_balise.startswith('<div class="lIMUZd"><div><table class="By0U9">'):
-            pass
-        else:
+        if not ' class="BhZo9">' in a_balise or a_balise.startswith('<div class="lIMUZd"><div><table class="By0U9">'):
             src_start = a_balise.index('imgurl=') + 7
             src_end = a_balise.index('imgrefurl') - 5
             img_link.append(f"{a_balise[src_start:src_end]}")
-    return img_link[0:result]
+
+    return img_link
 
 
 def pony(query, num_result=1):
@@ -57,3 +51,4 @@ def wb(query, num_result=1):
     url = f"https://google.com/search?q={wb_search}&source=lnms&tbm=isch&tbs=ic:gray"
     wb_link = all_recherche(url, num_result)
     return wb_link
+
