@@ -20,9 +20,10 @@ def pony(query, num_result=1, img_type="all"):
 
     :param query: --> Your request
     :param num_result: --> Number of result, the max value is 20
-    :param img_type: --> Type of image, they are 3 type of image:("all" : return all image type
-                                                                  "gif": return only gif image
-                                                                  "wb": return only white and black image)                                                  
+    :param img_type: --> Type of image, they are 3 type of image, by default value is "all":
+                            "all" : return all image type
+                            "gif": return only gif image
+                            "wb": return only white and black image                                                 
     """
     img_search = str(query).replace(" ", "+")
     type_of_img = list_img_type[img_type] if img_type in list_img_type.keys() else list_img_type["all"]
@@ -48,13 +49,11 @@ def rainbow(query, num_result=1, img_type="all"):
 
     :param query: --> Your request
     :param num_result: --> Number of result, the max value is 20
-    :param img_type: --> Type of image, they are 3 type of image, by default value is "all":("all" : return all image type
-                                                                                             "gif": return only gif image
-                                                                                             "wb": return only white and black image)                                                 
+    :param img_type: --> Type of image, they are 3 type of image, by default value is "all":
+                            "all" : return all image type
+                            "gif": return only gif image
+                            "wb": return only white and black image                                                 
     """
     req = pony(query, 20,img_type)
     result = len(req) if num_result > len(req) else num_result
     return sample(req, k=result)
-
-
-print(pony("python", img_type="wb"))

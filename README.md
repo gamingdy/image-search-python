@@ -46,8 +46,6 @@ from imgsearch import pony
 img = pony("python langage", 5)
 # OR
 img = pony("python langage", num_result= 5)
-#OR ELSE
-img = pony(query="python langage", num_result=5)
 
 print(img)
 
@@ -66,6 +64,27 @@ img = rainbow(query="python langage", num_result=5)
 print(img)
 
 >> # Print a list with random each time
+```
+
+You can specify, type of image , you want
+
+```py
+from imgsearch import pony, rainbow
+
+img = pony("python langage", 2, "gif")
+#OR
+img = rainbow("python langage", 2, "gif")
+```
+
+For all option
+
+```py
+from imgsearch import pony, rainbow
+
+help(pony)
+#OR
+help(rainbow)
+
 ```
 
 **🚨 Warning 🚨**: The max value of results is 20 
