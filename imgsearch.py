@@ -7,6 +7,12 @@ agent = "Mozilla/5.0 (Linux; U; Android 2.3.3; fr-fr; GT-I9100 Build/GINGERBREAD
 
 header = {'User-Agent': agent}
 
+list_img_type = {
+    "gif": "tbm=isch&tbs=itp:animated",
+    "wb": "tbm=isch&tbs=ic:gray",
+    "all": "tbm=isch"
+}
+
 
 def all_recherche(url, num_result):
     r = get(url, headers=header)
@@ -24,31 +30,18 @@ def all_recherche(url, num_result):
     return img_link
 
 
-def pony(query, num_result=1):
+def pony(query, num_result=1, img_type="all"):
     img_search = str(query).replace(" ", "+")
-    url = f"https://google.com/search?q={img_search}&source=lnms&tbm=isch"
+    type_of_img = list_img_type[img_type] if img_type in list_img_type.keys() else list_img_type["all"]
+    url = f"https://google.com/search?q={img_search}&source=lnms&{type_of_img}"
     req = all_recherche(url, num_result)
     return req
 
 
-def rainbow(query, num_result=1):
-    req = pony(query, 20)
-    result = num_result
-    if num_result > len(req):
-        result = len(req)
+def rainbow(query, num_result=1, img_type="all"):
+    req = pony(query, 20,img_type)
+    result = len(req) if num_result > len(req) else num_result
     return sample(req, k=result)
 
 
-def gif(query, num_result=1):
-    gif_search = str(query).replace(" ", "+")
-    url = f"https://google.com/search?q={gif_search}&source=lnms&tbm=isch&tbs=itp:animated"
-    gif_link = all_recherche(url, num_result)
-    return gif_link
-
-
-def wb(query, num_result=1):
-    wb_search = str(query).replace(" ", "+")
-    url = f"https://google.com/search?q={wb_search}&source=lnms&tbm=isch&tbs=ic:gray"
-    wb_link = all_recherche(url, num_result)
-    return wb_link
-
+print(help(pony))
