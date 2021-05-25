@@ -63,6 +63,26 @@ print(img)
 >> # Affiche une liste avec des résultat aléatoires, chaque fois
 ```
 
+Il est possible de spécifier le type d'image souhaitez en faisant
+
+```py
+from imgsearch import pony, rainbow
+
+img = pony("python langage", 2, "gif")
+#OU
+img = rainbow("python langage", 2, "gif")
+```
+
+Toutes les option sont disponible avec le help
+
+```py
+from imgsearch import pony, rainbow
+
+help(pony)
+#OU
+help(rainbow)
+```
+
 **🚨 Attention 🚨** : Le nombre max de résultats est de 20.
 
 
